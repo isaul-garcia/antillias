@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/antillias/static/css/main.61b837fa.css",
-    "main.js": "/antillias/static/js/main.e83146d6.js",
+    "main.js": "/antillias/static/js/main.5d70ed2d.js",
     "static/media/antillia_place_01.glb": "/antillias/static/media/antillia_place_01.5eded50c5f52d1402adb.glb",
     "static/media/Inter.var.woff2?v=3.19": "/antillias/static/media/Inter.var.c2fe3cb2b7c746f7966a.woff2",
     "static/media/Inter-italic.var.woff2?v=3.19": "/antillias/static/media/Inter-italic.var.30807be7abc48ba8c73c.woff2",
@@ -52,10 +52,10 @@
     "index.html": "/antillias/index.html",
     "static/media/icons-ico.svg": "/antillias/static/media/icons-ico.898b50c7d6762c55b6ae2d57a41db840.svg",
     "main.61b837fa.css.map": "/antillias/static/css/main.61b837fa.css.map",
-    "main.e83146d6.js.map": "/antillias/static/js/main.e83146d6.js.map"
+    "main.5d70ed2d.js.map": "/antillias/static/js/main.5d70ed2d.js.map"
   },
   "entrypoints": [
     "static/css/main.61b837fa.css",
-    "static/js/main.e83146d6.js"
+    "static/js/main.5d70ed2d.js"
   ]
 }
