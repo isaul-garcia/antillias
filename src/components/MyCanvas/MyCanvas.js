@@ -26,12 +26,12 @@ function MyCanvas() {
               <SelectToZoom>
                 <Invi name="Ico00" position={[22.75, -6.39, 2]} />
                 <Ico name="Ico01" position={[-5.75, 6.39, 5.23]} />
-                <Ico name="Ico02" position={[14.75, 2.75, 5.15]} />
-                <Ico name="Ico03" position={[5.07, 6.51, -7.95]} /> 
-                <Ico name="Ico04" position={[-2.0, 4.0, -13.3]} />
-                <Ico name="Ico05" position={[-19.9, 2.91, -6.35]} />
-                <Ico name="Ico06" position={[0.95, 3.1, 14.5]} />
-                <Ico name="Ico07" position={[5.97, 5.75, 5.6]} />
+                <Ico name="Ico01" position={[14.75, 2.75, 5.15]} />
+                <Ico name="Ico01" position={[5.07, 6.51, -7.95]} /> 
+                <Ico name="Ico01" position={[-2.0, 4.0, -13.3]} />
+                <Ico name="Ico01" position={[-19.9, 2.91, -6.35]} />
+                <Ico name="Ico01" position={[0.95, 3.1, 14.5]} />
+                <Ico name="Ico01" position={[5.97, 5.75, 5.6]} />
               </SelectToZoom>
             </Bounds>
           </Selection>
@@ -42,9 +42,11 @@ function MyCanvas() {
   );
 }
 
+//Icosahedrons used for navigation, aka polygons
 function Ico({ name, ...props }) {
   const { nodes, materials } = useGLTF(model);
   const [ico, setIco] = useState(null);
+  //Used to "dissapear" the polygons when selected to view
   const [shrink, setShrink] = useState(null);
   return (
     <Select enabled={ico}>
@@ -53,6 +55,7 @@ function Ico({ name, ...props }) {
   )
 }
 
+//Temporary solution using an invisible polygon to adjust the camera in the right place when it "fits" them in camera to the bounds of all of them together
 function Invi({ name, ...props }) {
   const { nodes, materials } = useGLTF(model);
   return (
@@ -60,6 +63,7 @@ function Invi({ name, ...props }) {
   )
 }
 
+//Gets the bounds of the object child (a polygon) and fits them into the camera
 function SelectToZoom({ children, ...props }) {
   const group = useRef()
   const api = useBounds()

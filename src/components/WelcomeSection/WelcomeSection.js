@@ -1,14 +1,14 @@
 import React from 'react';
 import * as s from './WelcomeSection.elements';
-import Logo from '../../images/logotype.svg'
-import String from '../../images/lined_text.svg'
-import Ico from '../../images/icons-ico.svg'
-import Fan from '../../images/icons-fan.svg'
-import Brg from '../../images/icons-brg.svg'
-import Key from '../../images/icons-key.svg'
+import Logo from '../../images/logotype.svg';
+import String from '../../images/lined_text.svg';
+import Ico from '../../images/icons-ico.svg';
+import Fan from '../../images/icons-fan.svg';
+import Brg from '../../images/icons-brg.svg';
+import Key from '../../images/icons-key.svg';
 import Marquee from "react-fast-marquee";
 
-const WelcomeSection = ({ expand, setExpand }) => {
+const WelcomeSection = ({ expanded, setExpanded }) => {
     return (
         <>
             <s.WelcomeContainer>
@@ -19,12 +19,12 @@ const WelcomeSection = ({ expand, setExpand }) => {
                 </s.WelcomeWrapper>
             </s.WelcomeContainer>
 
-            <s.InfoContainer expand={expand}>
+            <s.InfoContainer expanded={expanded}>
                 <s.InfoWrapper>
-
+                    {/* Should make a Box that propagates in the future */}
                     <s.BoxContainer>
-                        <s.BoxWrapper customColor={"#1d62ff"} customPadding={"0.5em 1.25em"} onClick={() => setExpand(!expand)}>
-                            <h5>{expand ? '▴' : '▾'}</h5>
+                        <s.BoxWrapper customColor={"#1d62ff"} customPadding={"0.5em 1.25em"} onClick={() => setExpanded(!expanded)}>
+                            <h5>{expanded ? '▴' : '▾'}</h5>
                         </s.BoxWrapper>
                     </s.BoxContainer>
 
@@ -65,10 +65,11 @@ const WelcomeSection = ({ expand, setExpand }) => {
                             <s.IcoImage src={Ico} />
                         </s.IcoWrapper>
                     </s.BoxContainer>
+
                 </s.InfoWrapper>
             </s.InfoContainer>
 
-            <s.PlayContainer expand={expand}>
+            <s.PlayContainer expanded={expanded}>
                 <s.PlayWrapper>
                     <s.Icon src={Fan} place={"2em"} />
                     <s.Icon src={Key} place={"8.5em 0em"} />

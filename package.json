@@ -1,6 +1,6 @@
 {
   "homepage" : "http://isauljosue.github.io/antillias",
-  "name": "artefactos",
+  "name": "antillias",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

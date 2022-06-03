@@ -3,11 +3,11 @@ import { MyCanvas, WelcomeSection } from '../components';
 import { CanvasContainer, CanvasWrapper } from '../globalStyles';
 
 const Home = () => {  
-    const [expand, setExpand] = useState(true);
+    const [expanded, setExpanded] = useState(true);
     return (
         <>
-            <WelcomeSection expand={expand} setExpand={setExpand}/>
-            <CanvasContainer expand={expand} >
+            <WelcomeSection expanded={expanded} setExpanded={setExpanded}/>
+            <CanvasContainer expanded={expanded} >
                 <CanvasWrapper>
                     <MyCanvas />
                 </CanvasWrapper>

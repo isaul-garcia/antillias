@@ -86,7 +86,7 @@ export const InfoContainer = styled.div`
     @media screen and (max-width: 991px) {
         width: 100%;
         overflow-y: scroll;
-        margin-top: ${({ expand }) => (expand ? `84vh` : '0vh')};
+        margin-top: ${({ expanded }) => (expanded ? `84vh` : '0vh')};
         z-index: 5;
         transition: 0.5s;
     }
@@ -127,7 +127,7 @@ export const BoxWrapper = styled.div`
     background-color: ${({ customColor }) => (customColor)};
     margin-bottom: ${({ customSpacing }) => (customSpacing)};
     pointer-events: auto;
-    cursor: auto;   
+    cursor: default;   
     
     ${({ exp }) => (exp ? `
         @media screen and (min-width: 991px) {
@@ -180,14 +180,10 @@ export const PlayContainer = styled.div`
     z-index: 3; 
     pointer-events: none;
     transition: 0.5s;
-    
-    @media screen and (max-width: 1300px) {
-        
-    }
 
     @media screen and (max-width: 991px) {
         width: 100%;
-        opacity: ${({ expand }) => (expand ? `1` : '0')};
+        opacity: ${({ expanded }) => (expanded ? `1` : '0')};
     }
 `
 
@@ -197,10 +193,6 @@ export const PlayWrapper = styled.div`
     height: 100%;
     padding: 5em;
     margin-top: -7em;
-    
-    @media screen and (max-width: 1300px) {
-        
-    }
 
     @media screen and (max-width: 991px) {
         padding: 1.5em;
